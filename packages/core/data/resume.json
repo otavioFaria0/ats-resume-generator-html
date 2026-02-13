@@ -1,0 +1,94 @@
+{
+  "name": "OTAVIO FARIA",
+  "title": "Estudante de Engenharia de Software | Algoritmos e Estruturas de Dados",
+
+  "email": "otavio.augustfaria0@gmail.com",
+  "phone_display": "(35) 99970-4257",
+  "location": "Pouso Alegre, Brasil",
+  "linkedin_url": "https://www.linkedin.com/in/otavio-faria-3b09643a6/",
+  "github_url": "https://github.com/otavioFaria0",
+
+  "summary": "Estudante de Engenharia de Software com sólida base em lógica de programação, algoritmos e resolução de problemas. Concluí diversos cursos da Alura em algoritmos, JavaScript, Git e fundamentos de programação. Experiência prática em exercícios de ordenação, manipulação de arrays e desenvolvimento de soluções passo a passo. Busco a oportunidade de monitoria em Algoritmos e Estruturas de Dados I para auxiliar outros alunos, desenvolver didática e aprofundar conhecimentos em programação estruturada e C/C++.",
+
+  "skills": [
+    {
+      "group": "Algoritmos e Estruturas de Dados",
+      "items": [
+        "QuickSort",
+        "MergeSort",
+        "Selection Sort",
+        "Busca Binária",
+        "Manipulação de Arrays",
+        "Lógica de Programação",
+        "Resolução de Problemas"
+      ]
+    },
+    {
+      "group": "Linguagens",
+      "items": [
+        "JavaScript",
+        "C++ (em andamento)",
+        "Node.js",
+        "Java (básico)",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "group": "Ferramentas",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "IntelliJ IDEA"
+      ]
+    },
+    {
+      "group": "Cursos Relevantes (Alura)",
+      "items": [
+        "Lógica de Programação",
+        "Algoritmos com JavaScript",
+        "Arrays e Objetos",
+        "Git e GitHub",
+        "HTML e CSS"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Repositório de Estudos de Algoritmos (Projeto Principal)",
+      "stack": "JavaScript, Lógica de Programação",
+      "bullets": [
+        "Implementação completa de algoritmos clássicos: QuickSort, MergeSort, Selection Sort e Busca Binária",
+        "Repositório organizado por tópicos para facilitar aprendizado e ensino de algoritmos",
+        "Códigos comentados com explicação passo a passo das soluções",
+        "Prática de depuração e análise de complexidade de algoritmos",
+        "Material utilizado para preparação em Algoritmos e Estruturas de Dados I"
+      ],
+      "links": [
+        {
+          "label": "GitHub – Repositório Principal",
+          "url": "https://github.com/otavioFaria0/Algoritmos-JS"
+        }
+      ]
+    }
+
+  ],
+
+  "education": [
+    {
+      "title": "Bacharelado em Engenharia de Software",
+      "subtitle": "Instituto Nacional de Telecomunicações – INATEL",
+      "date": "Inicio em 2026"
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "Inglês",
+      "level": "Intermediário",
+      "note": "Leitura técnica"
+    }
+  ]
+}
