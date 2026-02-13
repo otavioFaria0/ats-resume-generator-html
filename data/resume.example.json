@@ -1,68 +1,86 @@
 {
   "name": "OTAVIO FARIA",
-  "title": "Software Engineer Student | Backend Development",
+  "title": "Estudante de Engenharia de Software | Algoritmos e Estruturas de Dados",
+
   "email": "otavio.augustfaria0@gmail.com",
-  "phone_e164": "",
   "phone_display": "(35) 99970-4257",
-  "location": "Pouso Alegre / Brazil",
+  "location": "Pouso Alegre, Brasil",
   "linkedin_url": "https://www.linkedin.com/in/otavio-faria-3b09643a6/",
   "github_url": "https://github.com/otavioFaria0",
-  "website_url": "",
 
-  "summary": "Estudante de Engenharia de Software INATEL com foco em desenvolvimento backend, atualmente cursando o primeiro ano do bacharelado. Experiência prática em projetos pessoais e acadêmicos, com habilidades em JavaScript, Node.js, Java, Git, GitHub e conceitos de desenvolvimento web. Buscando oportunidades para aplicar conhecimentos técnicos, aprender, instruir e crescer profissionalmente na área de desenvolvimento de software.",
+  "summary": "Estudante de Engenharia de Software com sólida base em lógica de programação, algoritmos e resolução de problemas. Concluí diversos cursos da Alura em algoritmos, JavaScript, Git e fundamentos de programação. Experiência prática em exercícios de ordenação, manipulação de arrays e desenvolvimento de soluções passo a passo. Busco a oportunidade de monitoria em Algoritmos e Estruturas de Dados I para auxiliar outros alunos, desenvolver didática e aprofundar conhecimentos em programação estruturada e C/C++.",
 
   "skills": [
     {
-      "group": "Linguagens e Tecnologias",
-      "items": ["JavaScript", "Node.js", "HTML", "CSS", "Java"]
+      "group": "Algoritmos e Estruturas de Dados",
+      "items": [
+        "QuickSort",
+        "MergeSort",
+        "Selection Sort",
+        "Busca Binária",
+        "Manipulação de Arrays",
+        "Lógica de Programação",
+        "Resolução de Problemas"
+      ]
     },
     {
-      "group": "Versionamento de Código",
-      "items": ["Git", "GitHub"]
+      "group": "Linguagens",
+      "items": [
+        "JavaScript",
+        "C++ (aprendizado de sintaxe em andamento)",
+        "Node.js",
+        "Java (básico)",
+        "HTML",
+        "CSS"
+      ]
     },
     {
-      "group": "Ferramentas de Desenvolvimento",
-      "items": [ "Visual Studio Code", "IntelliJ IDEA", "Vercel"]
+      "group": "Ferramentas",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "IntelliJ IDEA"
+      ]
+    },
+    {
+      "group": "Cursos Relevantes (Alura)",
+      "items": [
+        "Lógica de Programação",
+        "Algoritmos com JavaScript",
+        "Arrays e Objetos",
+        "Git e GitHub",
+        "HTML e CSS"
+      ]
     }
   ],
 
   "projects": [
     {
-      "title": "Full Stack Web Application",
-      "stack": "Node.js, REST APIs, PostgreSQL",
+      "title": "Repositório de Estudos de Algoritmos (Projeto Principal)",
+      "stack": "JavaScript, Lógica de Programação",
       "bullets": [
-        "Designed and implemented a full stack web application with a clear separation of concerns",
-        "Built RESTful APIs with authentication and basic access control",
-        "Applied structured data modeling and version control best practices"
+        "Implementação completa de algoritmos clássicos: QuickSort, MergeSort, Selection Sort e Busca Binária",
+        "Repositório organizado por tópicos para facilitar aprendizado e ensino de algoritmos",
+        "Códigos comentados com explicação passo a passo das soluções",
+        "Prática de depuração e análise de complexidade de algoritmos",
+        "Material utilizado para preparação em Algoritmos e Estruturas de Dados I"
       ],
       "links": [
         {
-          "label": "Repository",
-          "url": "https://github.com/example-user/sample-project"
+          "label": "GitHub – Repositório Principal",
+          "url": "https://github.com/otavioFaria0/Algoritmos-JS"
         }
       ]
-    },
-    {
-      "title": "Personal Automation Tool",
-      "stack": "JavaScript, Node.js",
-      "bullets": [
-        "Developed a small automation script to streamline repetitive tasks",
-        "Focused on code readability, maintainability, and documentation",
-        "Practiced modular design and error handling"
-      ]
     }
+
   ],
 
   "education": [
     {
       "title": "Bacharelado em Engenharia de Software",
-      "subtitle": "Instituto Nacional de Telecomunicações (INATEL)",
-      "date": "Em progresso — Início em 2026"
-    },
-    {
-      "title": "",
-      "subtitle": "Example University",
-      "date": "Completed — 2023"
+      "subtitle": "Instituto Nacional de Telecomunicações – INATEL",
+      "date": "Inicio em 2026"
     }
   ],
 
@@ -70,7 +88,7 @@
     {
       "name": "Inglês",
       "level": "Intermediário",
-      "note": "Leitura técnica e comunicação"
+      "note": "Leitura técnica"
     }
   ]
 }
