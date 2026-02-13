@@ -1,41 +1,28 @@
 {
-  "name": "FABRICIO TRINDADE",
-  "title": "Full Stack • Web Development",
-  "email": "example@email.com",
-  "phone_e164": "+10000000000",
-  "phone_display": "(00) 00000-0000",
-  "location": "Remote / Brazil",
-  "linkedin_url": "https://www.linkedin.com/in/example-profile",
-  "github_url": "https://github.com/example-user",
-  "website_url": "https://example.com",
+  "name": "OTAVIO FARIA",
+  "title": "Software Engineer Student | Backend Development",
+  "email": "otavio.augustfaria0@gmail.com",
+  "phone_e164": "",
+  "phone_display": "(35) 99970-4257",
+  "location": "Pouso Alegre / Brazil",
+  "linkedin_url": "https://www.linkedin.com/in/otavio-faria-3b09643a6/",
+  "github_url": "https://github.com/otavioFaria0",
+  "website_url": "",
 
-  "summary": "Computer Science student with a strong foundation in programming logic and hands-on experience building web applications and APIs. Familiar with cloud fundamentals, system troubleshooting, and structured problem-solving. Seeking an internship focused on cloud infrastructure, monitoring, and automation, with emphasis on clean architecture and ATS-friendly documentation.",
+  "summary": "Estudante de Engenharia de Software INATEL com foco em desenvolvimento backend, atualmente cursando o primeiro ano do bacharelado. Experiência prática em projetos pessoais e acadêmicos, com habilidades em JavaScript, Node.js, Java, Git, GitHub e conceitos de desenvolvimento web. Buscando oportunidades para aplicar conhecimentos técnicos, aprender, instruir e crescer profissionalmente na área de desenvolvimento de software.",
 
   "skills": [
     {
-      "group": "Programming",
-      "items": ["JavaScript", "Node.js", "HTML", "CSS", "SQL"]
+      "group": "Linguagens e Tecnologias",
+      "items": ["JavaScript", "Node.js", "HTML", "CSS", "Java"]
     },
     {
-      "group": "Frameworks",
-      "items": ["Next.js", "Express.js", "React"]
+      "group": "Versionamento de Código",
+      "items": ["Git", "GitHub"]
     },
     {
-      "group": "Databases",
-      "items": ["PostgreSQL", "MongoDB", "ORM concepts"]
-    },
-    {
-      "group": "Cloud & Infrastructure",
-      "items": [
-        "Cloud fundamentals",
-        "Monitoring concepts",
-        "Networking basics",
-        "Linux basics"
-      ]
-    },
-    {
-      "group": "Tools",
-      "items": ["Git", "GitHub", "Docker", "CI/CD concepts"]
+      "group": "Ferramentas de Desenvolvimento",
+      "items": [ "Visual Studio Code", "IntelliJ IDEA", "Vercel"]
     }
   ],
 
@@ -66,27 +53,14 @@
     }
   ],
 
-  "experience": [
-    {
-      "role": "Technical Support Analyst",
-      "company": "Example Technology Company",
-      "date": "2021 — Present",
-      "bullets": [
-        "Provided technical support and troubleshooting for systems and network-related issues",
-        "Assumed operational coordination responsibilities on multiple occasions, organizing tasks and prioritizing incidents",
-        "Communicated technical problems clearly to both technical and non-technical stakeholders"
-      ]
-    }
-  ],
-
   "education": [
     {
-      "title": "Bachelor’s Degree in Computer Science",
-      "subtitle": "Example University",
-      "date": "In progress — Expected 2029"
+      "title": "Bacharelado em Engenharia de Software",
+      "subtitle": "Instituto Nacional de Telecomunicações (INATEL)",
+      "date": "Em progresso — Início em 2026"
     },
     {
-      "title": "Associate Degree in Systems Analysis and Development",
+      "title": "",
       "subtitle": "Example University",
       "date": "Completed — 2023"
     }
@@ -94,9 +68,9 @@
 
   "languages": [
     {
-      "name": "English",
-      "level": "Intermediate",
-      "note": "Technical reading and conversational skills"
+      "name": "Inglês",
+      "level": "Intermediário",
+      "note": "Leitura técnica e comunicação"
     }
   ]
 }
