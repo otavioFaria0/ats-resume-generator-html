@@ -307,10 +307,54 @@ export function useResumeStore() {
 
   const loadJson = useCallback((json: string) => {
     try {
-      const data = JSON.parse(json) as ResumeData;
+      const raw = JSON.parse(json);
+      if (typeof raw !== "object" || raw === null || Array.isArray(raw)) {
+        alert("Invalid file: expected a JSON object with resume fields.");
+        return;
+      }
+      // Merge with empty resume so missing fields get defaults
+      const base = emptyResume();
+      const data: ResumeData = {
+        ...base,
+        name: typeof raw.name === "string" ? raw.name : base.name,
+        title: typeof raw.title === "string" ? raw.title : base.title,
+        email: typeof raw.email === "string" ? raw.email : base.email,
+        phone_e164:
+          typeof raw.phone_e164 === "string" ? raw.phone_e164 : base.phone_e164,
+        phone_display:
+          typeof raw.phone_display === "string"
+            ? raw.phone_display
+            : base.phone_display,
+        location:
+          typeof raw.location === "string" ? raw.location : base.location,
+        linkedin_url:
+          typeof raw.linkedin_url === "string"
+            ? raw.linkedin_url
+            : base.linkedin_url,
+        github_url:
+          typeof raw.github_url === "string" ? raw.github_url : base.github_url,
+        website_url:
+          typeof raw.website_url === "string"
+            ? raw.website_url
+            : base.website_url,
+        summary: typeof raw.summary === "string" ? raw.summary : base.summary,
+        skills: Array.isArray(raw.skills) ? raw.skills : base.skills,
+        projects: Array.isArray(raw.projects) ? raw.projects : base.projects,
+        experience: Array.isArray(raw.experience)
+          ? raw.experience
+          : base.experience,
+        education: Array.isArray(raw.education)
+          ? raw.education
+          : base.education,
+        languages: Array.isArray(raw.languages)
+          ? raw.languages
+          : base.languages,
+      };
       dispatch({ type: "REPLACE_ALL", data });
     } catch {
-      alert("Invalid JSON file");
+      alert(
+        "Could not read this file. Make sure it's a valid JSON file (e.g. one exported from this app).",
+      );
     }
   }, []);
 

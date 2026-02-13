@@ -47,7 +47,7 @@ If you can edit a JSON file, you can generate a professional ATS-compatible resu
 
 ## Project Structure
 
-This project uses a **pnpm monorepo** with two packages:
+This project uses an **npm monorepo** with two packages:
 
 📦 cv-ats-html<br>
 ├─ 📁 packages/core # Resume engine (JSON → HTML → PDF)<br>
@@ -73,7 +73,6 @@ This project uses a **pnpm monorepo** with two packages:
 │ │ └─ 📁 styles # Tailwind + UntitledUI theme<br>
 │ └─ 📄 vite.config.ts # Vite config + PDF middleware<br>
 │<br>
-├─ 📄 pnpm-workspace.yaml<br>
 ├─ 📄 package.json # Root workspace scripts<br>
 └─ 📄 CLAUDE.md # Architecture plan & decisions<br>
 
@@ -84,19 +83,13 @@ This project uses a **pnpm monorepo** with two packages:
 Requirements:
 
 - Node.js **18+**
-- pnpm **9+**
-
 Clone the repository and install dependencies:
 
 ```bash
-pnpm install
+npm install
 ```
 
-Install Playwright browsers (required for PDF export):
-
-```bash
-npx playwright install
-```
+Playwright browsers are installed automatically during `npm install`.
 
 ---
 
@@ -107,7 +100,7 @@ npx playwright install
 Start the visual editor in your browser:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Open http://localhost:5173 and:
@@ -128,7 +121,7 @@ Open and edit:
 2. Generate HTML resume
 
 ```bash
-pnpm build:html
+npm run build:html
 ```
 
 Output: `dist/cv.html`
@@ -136,7 +129,7 @@ Output: `dist/cv.html`
 3. Generate PDF resume
 
 ```bash
-pnpm pdf
+npm run pdf
 ```
 
 Output: `dist/cv.pdf`

@@ -11,20 +11,20 @@ export default function PreviewPage() {
     <div className="min-h-screen bg-bg-secondary flex flex-col">
       {/* toolbar */}
       <header className="sticky top-0 z-30 bg-bg-primary border-b border-border-secondary shadow-xs">
-        <div className="max-w-[var(--max-width-container)] mx-auto flex items-center justify-between px-4 py-3">
-          <h1 className="text-lg font-semibold text-text-primary">
+        <div className="max-w-[var(--max-width-container)] mx-auto flex items-center justify-between px-4 py-3 gap-3">
+          <h1 className="text-base sm:text-lg font-semibold text-text-primary truncate">
             Resume Preview
           </h1>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={() => navigate("/editor")}
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-bg-primary text-text-secondary hover:bg-bg-primary_hover border border-border-primary shadow-xs transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-lg px-3 sm:px-4 py-2 text-sm font-semibold bg-bg-primary text-text-secondary hover:bg-bg-primary_hover border border-border-primary shadow-xs transition-colors cursor-pointer"
             >
-              ← Back to Editor
+              <span className="hidden sm:inline">←</span> Back
             </button>
             <button
               onClick={exportPdf}
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-brand-600 text-white hover:bg-brand-700 border border-brand-600 shadow-xs transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-lg px-3 sm:px-4 py-2 text-sm font-semibold bg-brand-600 text-white hover:bg-brand-700 border border-brand-600 shadow-xs transition-colors cursor-pointer"
             >
               Export PDF
             </button>
@@ -33,12 +33,12 @@ export default function PreviewPage() {
       </header>
 
       {/* full-page preview */}
-      <div className="flex-1 flex justify-center p-6">
+      <div className="flex-1 flex justify-center p-3 sm:p-6">
         <div className="w-full max-w-[850px] bg-white rounded-xl border border-border-secondary shadow-lg overflow-hidden">
           <iframe
             title="Resume Full Preview"
             srcDoc={html}
-            className="w-full h-full min-h-[1200px] bg-white"
+            className="w-full h-full min-h-[800px] sm:min-h-[1200px] bg-white"
             sandbox="allow-same-origin"
           />
         </div>

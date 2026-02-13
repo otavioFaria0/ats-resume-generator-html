@@ -185,6 +185,7 @@ export default function EditorPage() {
   const [showPreview, setShowPreview] = useState(false);
   const [showClearModal, setShowClearModal] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const previewHtml = usePreviewHtml(resume);
@@ -226,44 +227,91 @@ export default function EditorPage() {
 
       {/* ── header ────────────────────────────────── */}
       <header className="sticky top-0 z-30 bg-bg-primary border-b border-border-secondary shadow-xs">
-        <div className="max-w-[var(--max-width-container)] mx-auto flex items-center justify-between px-4 py-3 gap-3 flex-wrap">
+        <div className="max-w-[var(--max-width-container)] mx-auto flex items-center justify-between px-4 py-3 gap-4">
           <h1 className="text-display-xs font-bold text-text-primary whitespace-nowrap">
-            ATS Resume Generator
+            ATSRG
           </h1>
 
-          <div className="flex items-center gap-2 flex-wrap">
-            <Button variant="secondary" onClick={loadExample}>
-              Load Example
-            </Button>
-            <Button
-              variant="secondary"
-              onClick={() => fileRef.current?.click()}
-            >
-              Import JSON
-            </Button>
-            <input
-              ref={fileRef}
-              type="file"
-              accept=".json"
-              className="hidden"
-              onChange={handleImport}
-            />
-            <Button variant="secondary" onClick={exportJson}>
-              Export JSON
-            </Button>
-            <Button
-              variant="primary"
-              onClick={handleExportPdf}
-              className={isExporting ? "opacity-60 pointer-events-none" : ""}
-            >
-              {isExporting ? "Exporting…" : "Export PDF"}
-            </Button>
+          {/* ── mobile hamburger ── */}
+          <button
+            onClick={() => setMobileMenuOpen((o) => !o)}
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border-primary bg-bg-primary text-text-secondary hover:bg-bg-primary_hover transition-colors cursor-pointer"
+            aria-label="Menu"
+          >
+            {mobileMenuOpen ? (
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <line x1="4" y1="4" x2="16" y2="16" />
+                <line x1="16" y1="4" x2="4" y2="16" />
+              </svg>
+            ) : (
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <line x1="3" y1="5" x2="17" y2="5" />
+                <line x1="3" y1="10" x2="17" y2="10" />
+                <line x1="3" y1="15" x2="17" y2="15" />
+              </svg>
+            )}
+          </button>
+
+          {/* ── desktop buttons ── */}
+          <div className="hidden lg:flex items-center gap-6">
+            {/* ── load data ── */}
+            <div className="flex items-center gap-2">
+              <Button variant="secondary" onClick={loadExample}>
+                Load Example
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={() => fileRef.current?.click()}
+              >
+                Import JSON
+              </Button>
+            </div>
+
+            <div className="w-px h-6 bg-border-secondary" />
+
+            {/* ── export ── */}
+            <div className="flex items-center gap-2">
+              <Button variant="secondary" onClick={exportJson}>
+                Export JSON
+              </Button>
+              <Button
+                variant="primary"
+                onClick={handleExportPdf}
+                className={isExporting ? "opacity-60 pointer-events-none" : ""}
+              >
+                {isExporting ? "Exporting…" : "Export PDF"}
+              </Button>
+            </div>
+
+            <div className="w-px h-6 bg-border-secondary" />
+
+            {/* ── view ── */}
             <Button
               variant="secondary"
               onClick={() => setShowPreview((p) => !p)}
             >
               {showPreview ? "Hide Preview" : "Show Preview"}
             </Button>
+
+            <div className="w-px h-6 bg-border-secondary" />
+
+            {/* ── danger zone ── */}
             <Button
               variant="destructive"
               onClick={() => setShowClearModal(true)}
@@ -272,14 +320,116 @@ export default function EditorPage() {
             </Button>
           </div>
         </div>
+
+        {/* ── mobile menu dropdown ── */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-border-secondary bg-bg-primary px-4 py-3 space-y-3 animate-in slide-in-from-top-2 duration-150">
+            {/* load */}
+            <div>
+              <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2">
+                Load Data
+              </p>
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    loadExample();
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Load Example
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    fileRef.current?.click();
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Import JSON
+                </Button>
+              </div>
+            </div>
+            {/* export */}
+            <div className="border-t border-border-secondary pt-3">
+              <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2">
+                Export
+              </p>
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    exportJson();
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Export JSON
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={() => {
+                    handleExportPdf();
+                    setMobileMenuOpen(false);
+                  }}
+                  className={
+                    isExporting ? "opacity-60 pointer-events-none" : ""
+                  }
+                >
+                  {isExporting ? "Exporting…" : "Export PDF"}
+                </Button>
+              </div>
+            </div>
+            {/* view */}
+            <div className="border-t border-border-secondary pt-3">
+              <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2">
+                View
+              </p>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  setShowPreview((p) => !p);
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {showPreview ? "Hide Preview" : "Show Preview"}
+              </Button>
+            </div>
+            {/* danger */}
+            <div className="border-t border-border-secondary pt-3">
+              <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-2">
+                Danger Zone
+              </p>
+              <Button
+                variant="destructive"
+                onClick={() => {
+                  setShowClearModal(true);
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Clear All
+              </Button>
+            </div>
+          </div>
+        )}
       </header>
 
+      {/* hidden file input (shared by desktop & mobile) */}
+      <input
+        ref={fileRef}
+        type="file"
+        accept=".json"
+        className="hidden"
+        onChange={handleImport}
+      />
+
       {/* ── body ──────────────────────────────────── */}
-      <div className="max-w-[var(--max-width-container)] mx-auto flex gap-6 p-4">
+      <div className="max-w-[var(--max-width-container)] mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6 p-4">
         {/* editor pane */}
-        <div className={`flex-1 min-w-0 ${showPreview ? "max-w-[50%]" : ""}`}>
+        <div
+          className={`flex-1 min-w-0 ${showPreview ? "lg:max-w-[50%]" : ""}`}
+        >
           {/* tabs */}
-          <nav className="flex gap-1 mb-6 overflow-x-auto pb-1">
+          <nav className="flex gap-1 mb-4 lg:mb-6 overflow-x-auto pb-1 -mx-4 px-4 lg:mx-0 lg:px-0">
             {TABS.map((tab) => (
               <button
                 key={tab}
@@ -296,7 +446,7 @@ export default function EditorPage() {
           </nav>
 
           {/* tab content */}
-          <div className="bg-bg-primary rounded-xl border border-border-secondary shadow-xs p-6">
+          <div className="bg-bg-primary rounded-xl border border-border-secondary shadow-xs p-4 lg:p-6">
             {activeTab === "Personal" && (
               <PersonalTab resume={resume} setField={setField} />
             )}
@@ -323,7 +473,7 @@ export default function EditorPage() {
 
         {/* preview pane */}
         {showPreview && (
-          <div className="w-1/2 min-w-[400px] sticky top-[73px] self-start">
+          <div className="w-full lg:w-1/2 lg:min-w-[400px] lg:sticky lg:top-[73px] lg:self-start">
             <div className="bg-bg-primary rounded-xl border border-border-secondary shadow-xs overflow-hidden">
               <div className="px-4 py-2 bg-bg-secondary border-b border-border-secondary">
                 <span className="text-sm font-medium text-text-tertiary">
