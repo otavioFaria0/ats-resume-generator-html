@@ -1,0 +1,89 @@
+{
+  "name": "OTAVIO FARIA",
+  "title": "Estudante de Engenharia de Software | Organização, Análise e Suporte Técnico",
+
+  "email": "otavio.augustfaria0@gmail.com",
+  "phone_display": "(35) 99970-4257",
+  "location": "Pouso Alegre, Brasil",
+  "linkedin_url": "https://www.linkedin.com/in/otavio-faria-3b09643a6/",
+  "github_url": "https://github.com/otavioFaria0",
+
+  "summary": "Estudante de Engenharia de Software com formação técnica em Administração, unindo base analítica e visão organizacional. Possuo experiência acadêmica no estudo estruturado de problemas, organização de informações e elaboração de registros técnicos, aliada à formação administrativa voltada a processos, comunicação profissional, gestão de documentos e relacionamento interpessoal. Tenho facilidade em aprender procedimentos, seguir padrões, analisar dados e apoiar rotinas técnicas com responsabilidade e atenção a detalhes. Busco oportunidade de estágio para aplicar minha capacidade de organização, suporte operacional e aprendizado contínuo em um ambiente técnico e de qualidade.",
+
+  "skills": [
+    {
+      "group": "Competências Técnicas e Organizacionais",
+      "items": [
+        "Organização e controle de informações",
+        "Elaboração e revisão de documentos",
+        "Apoio a rotinas técnicas e operacionais",
+        "Interpretação de requisitos e procedimentos",
+        "Análise lógica e resolução estruturada de problemas",
+        "Atenção a detalhes e padronização",
+        "Comunicação profissional e trabalho em equipe"
+      ]
+    },
+    {
+      "group": "Conhecimentos em Tecnologia",
+      "items": [
+        "Lógica de Programação",
+        "Algoritmos (base conceitual)",
+        "JavaScript",
+        "HTML e CSS",
+        "Node.js (fundamentos)",
+        "C++ (em andamento)",
+        "Java (básico)"
+      ]
+    },
+    {
+      "group": "Ferramentas",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "IntelliJ IDEA",
+        "Pacote Office",
+        "Ferramentas de documentação e organização"
+      ]
+    }
+  ],
+
+  "projects": [],
+
+  "experience": [],
+
+  "education": [
+    {
+      "title": "Bacharelado em Engenharia de Software",
+      "subtitle": "Instituto Nacional de Telecomunicações – INATEL",
+      "date": "Início em 2026"
+    },
+    {
+      "title": "Técnico em Administração Integrado ao Ensino Médio",
+      "subtitle": "Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas – IFSULDEMINAS",
+      "date": "Conclusão em 2025",
+      "details": "Formação voltada à organização empresarial, gestão de processos, atendimento, documentação, noções de negócios e trabalho em equipe."
+    }
+  ],
+
+  "certifications": [
+    {
+      "title": "Formação em Inglês",
+      "institution": "Wizard by Pearson",
+      "description": "Curso completo de língua inglesa com desenvolvimento de leitura, escrita e compreensão para uso acadêmico e profissional."
+    },
+    {
+      "title": "Formação em Tecnologia",
+      "institution": "Alura",
+      "description": "Cursos concluídos em Lógica de Programação, Algoritmos com JavaScript, Arrays e Objetos, Git e GitHub, HTML e CSS, com foco em raciocínio estruturado, organização de dados e boas práticas."
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "Inglês",
+      "level": "Intermediário",
+      "note": "Leitura técnica e comunicação"
+    }
+  ]
+}
